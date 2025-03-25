@@ -14,7 +14,8 @@
 #include "esp_mac.h"
 
 #define I2C_PORT 0
-#define I2C_ADDR 0x40
+#define I2C_ADDR_OUT 0x40
+#define I2C_ADDR_IN 0x41
 #define CONFIG_EXAMPLE_SHUNT_RESISTOR_MILLI_OHM 100
 
 #define CONFIG_EXAMPLE_I2C_MASTER_SDA 5
@@ -28,5 +29,5 @@ typedef struct power_data_t {
 } power_data;
 
 
-ina219_t ina_start();
+ina219_t ina_start(uint8_t address);
 power_data get_power_data(ina219_t *dev);

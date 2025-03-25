@@ -210,7 +210,6 @@ void send_sensor_data(int ina_out, float power, float voltage){
     // Cleanup
     esp_http_client_cleanup(client);
     free(post_data);  // Free allocated JSON string
-
 }
 #endif 
 

@@ -1,12 +1,12 @@
 #include "ina219_my.h"
 const static char *TAG = "INA219_example";
 
-ina219_t ina_start(){
+ina219_t ina_start(uint8_t address ){
     ina219_t dev;
     memset(&dev, 0, sizeof(ina219_t));
 
     assert(CONFIG_EXAMPLE_SHUNT_RESISTOR_MILLI_OHM > 0);
-    ESP_ERROR_CHECK(ina219_init_desc(&dev, I2C_ADDR, I2C_PORT, CONFIG_EXAMPLE_I2C_MASTER_SDA, CONFIG_EXAMPLE_I2C_MASTER_SCL));
+    ESP_ERROR_CHECK(ina219_init_desc(&dev, address, I2C_PORT, CONFIG_EXAMPLE_I2C_MASTER_SDA, CONFIG_EXAMPLE_I2C_MASTER_SCL));
     ESP_LOGI(TAG, "Initializing INA219");
     ESP_ERROR_CHECK(ina219_init(&dev));
 
