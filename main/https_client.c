@@ -107,14 +107,12 @@ esp_err_t _http_event_handler(esp_http_client_event_t *evt)
         case HTTP_EVENT_ON_FINISH:
             ESP_LOGD(TAG, "HTTP_EVENT_ON_FINISH");
             if (output_buffer != NULL) {
-                // Response is accumulated in output_buffer. Uncomment the below line to print the accumulated response
                 ESP_LOGI(TAG, "----------------------------------------");
-                ESP_LOG_BUFFER_HEX(TAG, output_buffer, output_len);
-                ESP_LOGI(TAG, "----------------------------------------");
-                ESP_LOGI(TAG, "Response Data: %s", output_buffer);
-                ESP_LOGI(TAG, "----------------------------------------");
+                //ESP_LOG_BUFFER_HEX(TAG, output_buffer, output_len);
                 free(output_buffer);
                 output_buffer = NULL;
+            } else {
+                ESP_LOGW(TAG, "No response buffer allocated!");
             }
             output_len = 0;
             break;

@@ -56,7 +56,7 @@ void task(void *pvParameters) {
             
         }
 
-        if (counter % 1000 == 0){
+        if (counter % 2000 == 0){
             sensor_data_params_t *params_out = malloc(sizeof(sensor_data_params_t));
             if (params_out == NULL) {
                 ESP_LOGE(TAG, "Failed to allocate memory for params_out");
