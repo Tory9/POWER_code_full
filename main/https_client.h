@@ -31,6 +31,12 @@ typedef struct {
     float voltage;
 } sensor_data_params_t;
 
+typedef struct {
+    char *buffer;
+    int length;
+    int max_length;
+} http_buffer_ctx_t;
+
 char* print_time();
 void initialize_sntp();
 void wait_for_time_sync();

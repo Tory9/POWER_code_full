@@ -50,93 +50,37 @@ void wait_for_time_sync() {
 
 esp_err_t _http_event_handler(esp_http_client_event_t *evt)
 {
-    static char *output_buffer;  
-    static int output_len;       
-    switch(evt->event_id) {
+    http_buffer_ctx_t *ctx = (http_buffer_ctx_t *)evt->user_data;
+
+    switch (evt->event_id) {
+        case HTTP_EVENT_ON_DATA:
+            ESP_LOGD(TAG, "HTTP_EVENT_ON_DATA, len=%d", evt->data_len);
+
+            if (!esp_http_client_is_chunked_response(evt->client)) {
+                int copy_len = MIN(evt->data_len, ctx->max_length - ctx->length);
+                if (copy_len > 0) {
+                    memcpy(ctx->buffer + ctx->length, evt->data, copy_len);
+                    ctx->length += copy_len;
+                }
+            }
+            break;
+
+        case HTTP_EVENT_ON_FINISH:
+            ctx->buffer[ctx->length] = '\0'; // Null-terminate
+            ESP_LOGI(TAG, "Response: %s", ctx->buffer);
+            break;
+
+        case HTTP_EVENT_DISCONNECTED:
+            ESP_LOGI(TAG, "HTTP_EVENT_DISCONNECTED");
+            break;
         case HTTP_EVENT_ERROR:
             ESP_LOGD(TAG, "HTTP_EVENT_ERROR");
             break;
-        case HTTP_EVENT_ON_CONNECTED:
-            ESP_LOGD(TAG, "HTTP_EVENT_ON_CONNECTED");
-            break;
-        case HTTP_EVENT_HEADER_SENT:
-            ESP_LOGD(TAG, "HTTP_EVENT_HEADER_SENT");
-            break;
-        case HTTP_EVENT_ON_HEADER:
-            ESP_LOGD(TAG, "HTTP_EVENT_ON_HEADER, key=%s, value=%s", evt->header_key, evt->header_value);
-            break;
-        case HTTP_EVENT_ON_DATA:
-            ESP_LOGD(TAG, "HTTP_EVENT_ON_DATA, len=%d", evt->data_len);
-         
-            if (output_len == 0 && evt->user_data) {
-                memset(evt->user_data, 0, MAX_HTTP_OUTPUT_BUFFER);
-            }
-            /*
-             *  Check for chunked encoding is added as the URL for chunked encoding used in this example returns binary data.
-             *  However, event handler can also be used in case chunked encoding is used.
-             */
-            if (!esp_http_client_is_chunked_response(evt->client)) {
-                // If user_data buffer is configured, copy the response into the buffer
-                int copy_len = 0;
-                if (evt->user_data) {
-                    // The last byte in evt->user_data is kept for the NULL character in case of out-of-bound access.
-                    copy_len = MIN(evt->data_len, (MAX_HTTP_OUTPUT_BUFFER - output_len));
-                    if (copy_len) {
-                        memcpy(evt->user_data + output_len, evt->data, copy_len);
-                    }
-                } else {
-                    int content_len = esp_http_client_get_content_length(evt->client);
-                    if (output_buffer == NULL) {
-                        // We initialize output_buffer with 0 because it is used by strlen() and similar functions therefore should be null terminated.
-                        output_buffer = (char *) calloc(content_len + 1, sizeof(char));
-                        output_len = 0;
-                        if (output_buffer == NULL) {
-                            ESP_LOGE(TAG, "Failed to allocate memory for output buffer");
-                            return ESP_FAIL;
-                        }
-                    }
-                    copy_len = MIN(evt->data_len, (content_len - output_len));
-                    if (copy_len) {
-                        memcpy(output_buffer + output_len, evt->data, copy_len);
-                    }
-                }
-                output_len += copy_len;
-            }
 
-            break;
-        case HTTP_EVENT_ON_FINISH:
-            ESP_LOGD(TAG, "HTTP_EVENT_ON_FINISH");
-            if (output_buffer != NULL) {
-                ESP_LOGI(TAG, "----------------------------------------");
-                //ESP_LOG_BUFFER_HEX(TAG, output_buffer, output_len);
-                free(output_buffer);
-                output_buffer = NULL;
-            } else {
-                ESP_LOGW(TAG, "No response buffer allocated!");
-            }
-            output_len = 0;
-            break;
-        case HTTP_EVENT_DISCONNECTED:
-            ESP_LOGI(TAG, "HTTP_EVENT_DISCONNECTED");
-            int mbedtls_err = 0;
-            esp_err_t err = esp_tls_get_and_clear_last_error((esp_tls_error_handle_t)evt->data, &mbedtls_err, NULL);
-            if (err != 0) {
-                ESP_LOGI(TAG, "Last esp error code: 0x%x", err);
-                ESP_LOGI(TAG, "Last mbedtls failure: 0x%x", mbedtls_err);
-            }
-            if (output_buffer != NULL) {
-                free(output_buffer);
-                output_buffer = NULL;
-            }
-            output_len = 0;
-            break;
-        case HTTP_EVENT_REDIRECT:
-            ESP_LOGD(TAG, "HTTP_EVENT_REDIRECT");
-            esp_http_client_set_header(evt->client, "From", "user@example.com");
-            esp_http_client_set_header(evt->client, "Accept", "text/html");
-            esp_http_client_set_redirection(evt->client);
+        default:
             break;
     }
+
     return ESP_OK;
 }
 
@@ -181,10 +125,29 @@ void send_sensor_data(int ina_out, float power, float voltage){
              base_path, time_str);
 
     // Configure HTTP client
+
+    http_buffer_ctx_t *ctx = malloc(sizeof(http_buffer_ctx_t));
+    if (!ctx) {
+        ESP_LOGE(TAG, "Failed to allocate memory for ctx");
+        return;
+    }
+
+    ctx->buffer = malloc(MAX_HTTP_OUTPUT_BUFFER);
+    ctx->length = 0;
+    ctx->max_length = MAX_HTTP_OUTPUT_BUFFER - 1;
+
+    if (!ctx->buffer) {
+        ESP_LOGE(TAG, "Failed to allocate memory for response buffer");
+        free(ctx);
+        return;
+    }
+
+
     esp_http_client_config_t config = {
         .url = url,
         .event_handler = _http_event_handler,
         .crt_bundle_attach = esp_crt_bundle_attach,
+        .user_data = ctx
     };
 
     esp_http_client_handle_t client = esp_http_client_init(&config);
@@ -208,6 +171,8 @@ void send_sensor_data(int ina_out, float power, float voltage){
     // Cleanup
     esp_http_client_cleanup(client);
     free(post_data);  // Free allocated JSON string
+    free(ctx->buffer);
+    free(ctx);
 }
 #endif 
 
