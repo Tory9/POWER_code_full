@@ -113,9 +113,8 @@ void send_sensor_data(int ina_out, float power, float voltage){
     cJSON_AddNumberToObject(root, "power", power);
     cJSON_AddNumberToObject(root, "voltage", voltage);
 
-    // Convert JSON object to string
     char *post_data = cJSON_PrintUnformatted(root);
-    cJSON_Delete(root);  // Free cJSON object
+    cJSON_Delete(root); 
 
     char url[256];
     char* time_str = print_time();
@@ -124,7 +123,6 @@ void send_sensor_data(int ina_out, float power, float voltage){
              "https://windturbinemonitor-b1b52-default-rtdb.europe-west1.firebasedatabase.app/Data/sensor_data/%s/%s.json?auth=t3kgf6oyJS006l10Hrn81t2HG7ELUcsOSLGFpBun", 
              base_path, time_str);
 
-    // Configure HTTP client
 
     http_buffer_ctx_t *ctx = malloc(sizeof(http_buffer_ctx_t));
     if (!ctx) {
@@ -152,12 +150,11 @@ void send_sensor_data(int ina_out, float power, float voltage){
 
     esp_http_client_handle_t client = esp_http_client_init(&config);
 
-    // Set HTTP method to PUT (or POST if you want to append data)
+
     esp_http_client_set_method(client, HTTP_METHOD_PUT);
     esp_http_client_set_header(client, "Content-Type", "application/json");
     esp_http_client_set_post_field(client, post_data, strlen(post_data));
 
-    // Perform the request
     esp_err_t err = esp_http_client_perform(client);
 
     if (err == ESP_OK) {
@@ -168,9 +165,9 @@ void send_sensor_data(int ina_out, float power, float voltage){
         ESP_LOGE(TAG, "Error performing HTTP request: %s", esp_err_to_name(err));
     }
 
-    // Cleanup
+
     esp_http_client_cleanup(client);
-    free(post_data);  // Free allocated JSON string
+    free(post_data);
     free(ctx->buffer);
     free(ctx);
 }
@@ -183,10 +180,6 @@ void http_test_task(void *pvParameters)
 
 #if CONFIG_MBEDTLS_CERTIFICATE_BUNDLE
     ESP_LOGI(TAG, "Start https");
-    //GET test
-    //https_with_url();
-
-    //POST data
     sensor_data_params_t *params = (sensor_data_params_t *)pvParameters;
     send_sensor_data(params->ina_out, params->power, params->voltage);
     free(pvParameters);

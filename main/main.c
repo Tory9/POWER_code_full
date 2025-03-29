@@ -66,7 +66,7 @@ void task(void *pvParameters) {
             params_out->power = data_out.power;
             params_out->voltage = data_out.bus_voltage;
 
-            //http_test_task(params_out);
+
             xTaskCreate(&http_test_task, "http_test_task", 8192, (void *)params_out, 5, NULL);
 
 
@@ -80,7 +80,6 @@ void task(void *pvParameters) {
             params_in->voltage = data_in.bus_voltage;
             counter = 0;
             
-            //http_test_task(params_in);
 
             xTaskCreate(&http_test_task, "http_test_task", 8192, (void *)params_in, 5, NULL);
         }
