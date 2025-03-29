@@ -3,6 +3,7 @@
 #include "ina219_my.h"
 #include <driver/gpio.h>
 #include <driver/ledc.h>
+#include "interrupts.h"
 
 
 const static char *TAG = "INA219_example";
@@ -36,56 +37,61 @@ void task(void *pvParameters) {
     ina219_t dev_out = ina_start(I2C_ADDR_OUT);
     ina219_t dev_in = ina_start(I2C_ADDR_IN);
 
-    int counter = 0;  // Counter for controlling print rate
-
     ESP_LOGI(TAG, "Starting the loop");
     pwm();
+    init_interrupts();
 
     while (1) {
-        power_data data_out = get_power_data(&dev_out);
-        power_data data_in = get_power_data(&dev_in);
 
-        int DUTY_CYCLE = mppt(data_out.power, data_out.bus_voltage);
+        if (mppt_flag){
+            mppt_flag = false;
+            power_data data_out = get_power_data(&dev_out);
+            power_data data_in = get_power_data(&dev_in);
 
-        if (counter % 8 == 0) {  // Print only every 200ms (8 * 25ms)
-            printf("OUTPUT___ VBUS: %.04f V, VSHUNT: %.04f mV, IBUS: %.04f mA, PBUS: %.04f mW, DUTY: %d\n",
-                data_out.bus_voltage, data_out.shunt_voltage, data_out.current, data_out.power, DUTY_CYCLE);
-            
-            printf("INPUT ___ VBUS: %.04f V, VSHUNT: %.04f mV, IBUS: %.04f mA, PBUS: %.04f mW, DUTY: %d\n",
-                data_in.bus_voltage, data_in.shunt_voltage, data_in.current, data_in.power, DUTY_CYCLE);
-            
-        }
+            int DUTY_CYCLE = mppt(data_out.power, data_out.bus_voltage);
 
-        if (counter % 2000 == 0){
-            sensor_data_params_t *params_out = malloc(sizeof(sensor_data_params_t));
-            if (params_out == NULL) {
-                ESP_LOGE(TAG, "Failed to allocate memory for params_out");
-                continue;
+            if (print_flag) {
+                print_flag = false;
+
+                printf("OUTPUT___ VBUS: %.04f V, VSHUNT: %.04f mV, IBUS: %.04f mA, PBUS: %.04f mW, DUTY: %d\n",
+                    data_out.bus_voltage, data_out.shunt_voltage, data_out.current, data_out.power, DUTY_CYCLE);
+
+                printf("INPUT ___ VBUS: %.04f V, VSHUNT: %.04f mV, IBUS: %.04f mA, PBUS: %.04f mW, DUTY: %d\n",
+                    data_in.bus_voltage, data_in.shunt_voltage, data_in.current, data_in.power, DUTY_CYCLE);
             }
-            params_out->ina_out = 1;
-            params_out->power = data_out.power;
-            params_out->voltage = data_out.bus_voltage;
 
 
-            xTaskCreate(&http_test_task, "http_test_task", 8192, (void *)params_out, 5, NULL);
+            if (http_flag) {
+                http_flag = false;
+
+                sensor_data_params_t *params_out = malloc(sizeof(sensor_data_params_t));
+                if (params_out == NULL) {
+                    ESP_LOGE(TAG, "Failed to allocate memory for params_out");
+                    continue;
+                }
+                params_out->ina_out = 1;
+                params_out->power = data_out.power;
+                params_out->voltage = data_out.bus_voltage;
 
 
-            sensor_data_params_t *params_in = malloc(sizeof(sensor_data_params_t));
-            if (params_in == NULL) {
-                ESP_LOGE(TAG, "Failed to allocate memory for params_in");
-                continue;
+                xTaskCreate(&http_test_task, "http_test_task", 8192, (void *)params_out, 5, NULL);
+
+
+                sensor_data_params_t *params_in = malloc(sizeof(sensor_data_params_t));
+                if (params_in == NULL) {
+                    ESP_LOGE(TAG, "Failed to allocate memory for params_in");
+                    continue;
+                }
+                params_in->ina_out = 0;
+                params_in->power = data_in.power;
+                params_in->voltage = data_in.bus_voltage;
+                
+
+                xTaskCreate(&http_test_task, "http_test_task", 8192, (void *)params_in, 5, NULL);
             }
-            params_in->ina_out = 0;
-            params_in->power = data_in.power;
-            params_in->voltage = data_in.bus_voltage;
-            counter = 0;
-            
-
-            xTaskCreate(&http_test_task, "http_test_task", 8192, (void *)params_in, 5, NULL);
         }
+        vTaskDelay(pdMS_TO_TICKS(10));   // Prevent task from hogging the CPU and triggering watchdog
 
-        counter++;
-        vTaskDelay(pdMS_TO_TICKS(25));  // Sample every 25ms (40Hz)
     }
 }
 

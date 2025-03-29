@@ -3,6 +3,10 @@
 #include "freertos/task.h"
 #include "esp_timer.h"
 #include "esp_log.h"
-#include "ina219_my.h"
-#include "https_client.h"
-#include "mppt.h"
+
+
+extern volatile bool print_flag;
+extern volatile bool http_flag;
+extern volatile bool mppt_flag;
+
+void init_interrupts(void);
