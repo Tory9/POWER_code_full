@@ -17,7 +17,7 @@
 rule C_COMPILER__POWER_code_full.2eelf_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -46,7 +46,7 @@ rule CUSTOM_COMMAND
 rule ASM_COMPILER____idf_xtensa_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building ASM object $out
 
 
@@ -56,7 +56,7 @@ rule ASM_COMPILER____idf_xtensa_unscanned_
 rule C_COMPILER____idf_xtensa_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -75,7 +75,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_xtensa_
 rule C_COMPILER____idf_esp_driver_gpio_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -94,7 +94,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_gpio_
 rule C_COMPILER____idf_esp_pm_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -113,7 +113,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_pm_
 rule ASM_COMPILER____idf_mbedtls_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building ASM object $out
 
 
@@ -123,7 +123,7 @@ rule ASM_COMPILER____idf_mbedtls_unscanned_
 rule C_COMPILER____idf_mbedtls_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -142,7 +142,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_mbedtls_
 rule C_COMPILER__everest_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -161,7 +161,7 @@ rule CXX_STATIC_LIBRARY_LINKER__everest_
 rule C_COMPILER__p256m_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -180,7 +180,7 @@ rule CXX_STATIC_LIBRARY_LINKER__p256m_
 rule C_COMPILER__mbedcrypto_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -201,7 +201,7 @@ rule CXX_STATIC_LIBRARY_LINKER__mbedcrypto_
 rule C_COMPILER__mbedx509_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -220,7 +220,7 @@ rule CXX_STATIC_LIBRARY_LINKER__mbedx509_
 rule C_COMPILER__mbedtls_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -239,7 +239,7 @@ rule CXX_STATIC_LIBRARY_LINKER__mbedtls_
 rule C_COMPILER____idf_esp_app_format_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -258,7 +258,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_app_format_
 rule C_COMPILER____idf_esp_bootloader_format_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -277,7 +277,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_bootloader_format_
 rule C_COMPILER____idf_app_update_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -296,7 +296,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_app_update_
 rule C_COMPILER____idf_esp_partition_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -315,7 +315,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_partition_
 rule C_COMPILER____idf_efuse_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -334,7 +334,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_efuse_
 rule C_COMPILER____idf_bootloader_support_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -353,7 +353,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_bootloader_support_
 rule C_COMPILER____idf_esp_mm_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -372,7 +372,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_mm_
 rule C_COMPILER____idf_spi_flash_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -391,7 +391,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_spi_flash_
 rule ASM_COMPILER____idf_esp_system_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building ASM object $out
 
 
@@ -401,7 +401,7 @@ rule ASM_COMPILER____idf_esp_system_unscanned_
 rule C_COMPILER____idf_esp_system_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -420,7 +420,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_system_
 rule C_COMPILER____idf_esp_common_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -439,7 +439,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_common_
 rule ASM_COMPILER____idf_esp_rom_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building ASM object $out
 
 
@@ -449,7 +449,7 @@ rule ASM_COMPILER____idf_esp_rom_unscanned_
 rule C_COMPILER____idf_esp_rom_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -468,7 +468,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_rom_
 rule C_COMPILER____idf_hal_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -487,7 +487,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_hal_
 rule C_COMPILER____idf_log_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -506,7 +506,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_log_
 rule C_COMPILER____idf_heap_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -525,7 +525,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_heap_
 rule C_COMPILER____idf_soc_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -544,7 +544,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_soc_
 rule C_COMPILER____idf_esp_hw_support_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -563,7 +563,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_hw_support_
 rule ASM_COMPILER____idf_freertos_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building ASM object $out
 
 
@@ -573,7 +573,7 @@ rule ASM_COMPILER____idf_freertos_unscanned_
 rule C_COMPILER____idf_freertos_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -592,7 +592,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_freertos_
 rule C_COMPILER____idf_newlib_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -611,7 +611,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_newlib_
 rule C_COMPILER____idf_pthread_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -630,7 +630,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_pthread_
 rule CXX_COMPILER____idf_cxx_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-g++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-g++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building CXX object $out
 
 
@@ -649,7 +649,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_cxx_
 rule C_COMPILER____idf_esp_timer_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -668,7 +668,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_timer_
 rule C_COMPILER____idf_esp_driver_gptimer_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -687,7 +687,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_gptimer_
 rule C_COMPILER____idf_esp_ringbuf_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -706,7 +706,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_ringbuf_
 rule C_COMPILER____idf_esp_driver_uart_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -725,7 +725,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_uart_
 rule C_COMPILER____idf_app_trace_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -744,7 +744,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_app_trace_
 rule C_COMPILER____idf_esp_event_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -763,7 +763,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_event_
 rule CXX_COMPILER____idf_nvs_flash_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-g++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-g++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building CXX object $out
 
 
@@ -782,7 +782,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_nvs_flash_
 rule C_COMPILER____idf_esp_driver_pcnt_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -801,7 +801,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_pcnt_
 rule C_COMPILER____idf_esp_driver_spi_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -820,7 +820,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_spi_
 rule C_COMPILER____idf_esp_driver_mcpwm_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -839,7 +839,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_mcpwm_
 rule C_COMPILER____idf_esp_driver_i2s_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -858,7 +858,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_i2s_
 rule C_COMPILER____idf_sdmmc_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -877,7 +877,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_sdmmc_
 rule C_COMPILER____idf_esp_driver_sdmmc_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -896,7 +896,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_sdmmc_
 rule C_COMPILER____idf_esp_driver_sdspi_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -915,7 +915,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_sdspi_
 rule C_COMPILER____idf_esp_driver_rmt_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -934,7 +934,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_rmt_
 rule C_COMPILER____idf_esp_driver_tsens_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -953,7 +953,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_tsens_
 rule C_COMPILER____idf_esp_driver_sdm_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -972,7 +972,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_sdm_
 rule C_COMPILER____idf_esp_driver_i2c_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -991,7 +991,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_i2c_
 rule C_COMPILER____idf_esp_driver_ledc_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1010,7 +1010,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_ledc_
 rule C_COMPILER____idf_esp_driver_usb_serial_jtag_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1029,7 +1029,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_usb_serial_jtag_
 rule C_COMPILER____idf_driver_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1048,7 +1048,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_driver_
 rule C_COMPILER____idf_esp_phy_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1067,7 +1067,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_phy_
 rule C_COMPILER____idf_esp_vfs_console_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1086,7 +1086,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_vfs_console_
 rule C_COMPILER____idf_vfs_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1105,7 +1105,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_vfs_
 rule C_COMPILER____idf_lwip_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1124,7 +1124,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_lwip_
 rule C_COMPILER____idf_esp_netif_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1143,7 +1143,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_netif_
 rule C_COMPILER____idf_wpa_supplicant_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1164,7 +1164,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_wpa_supplicant_
 rule C_COMPILER____idf_esp_coex_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1183,7 +1183,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_coex_
 rule C_COMPILER____idf_esp_wifi_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1202,7 +1202,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_wifi_
 rule C_COMPILER____idf_unity_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1221,7 +1221,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_unity_
 rule C_COMPILER____idf_cmock_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1240,7 +1240,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_cmock_
 rule C_COMPILER____idf_console_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1259,7 +1259,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_console_
 rule C_COMPILER____idf_http_parser_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1278,7 +1278,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_http_parser_
 rule C_COMPILER____idf_esp-tls_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1297,7 +1297,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp-tls_
 rule C_COMPILER____idf_esp_adc_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1316,7 +1316,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_adc_
 rule C_COMPILER____idf_esp_driver_cam_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1335,7 +1335,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_cam_
 rule C_COMPILER____idf_esp_eth_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1354,7 +1354,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_eth_
 rule ASM_COMPILER____idf_esp_gdbstub_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building ASM object $out
 
 
@@ -1364,7 +1364,7 @@ rule ASM_COMPILER____idf_esp_gdbstub_unscanned_
 rule C_COMPILER____idf_esp_gdbstub_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1383,7 +1383,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_gdbstub_
 rule C_COMPILER____idf_esp_hid_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1402,7 +1402,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_hid_
 rule C_COMPILER____idf_tcp_transport_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1421,7 +1421,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_tcp_transport_
 rule C_COMPILER____idf_esp_http_client_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1440,7 +1440,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_http_client_
 rule C_COMPILER____idf_esp_http_server_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1459,7 +1459,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_http_server_
 rule C_COMPILER____idf_esp_https_ota_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1478,7 +1478,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_https_ota_
 rule C_COMPILER____idf_esp_https_server_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1497,7 +1497,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_https_server_
 rule C_COMPILER____idf_esp_lcd_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1516,7 +1516,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_lcd_
 rule C_COMPILER____idf_protobuf-c_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1535,7 +1535,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_protobuf-c_
 rule C_COMPILER____idf_protocomm_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1554,7 +1554,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_protocomm_
 rule C_COMPILER____idf_esp_local_ctrl_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1573,7 +1573,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_local_ctrl_
 rule C_COMPILER____idf_espcoredump_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1592,7 +1592,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_espcoredump_
 rule CXX_COMPILER____idf_wear_levelling_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-g++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-g++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building CXX object $out
 
 
@@ -1611,7 +1611,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_wear_levelling_
 rule C_COMPILER____idf_fatfs_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1630,7 +1630,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_fatfs_
 rule C_COMPILER____idf_json_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1649,7 +1649,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_json_
 rule C_COMPILER____idf_mqtt_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1668,7 +1668,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_mqtt_
 rule C_COMPILER____idf_nvs_sec_provider_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1687,7 +1687,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_nvs_sec_provider_
 rule C_COMPILER____idf_perfmon_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1706,7 +1706,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_perfmon_
 rule C_COMPILER____idf_spiffs_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1725,7 +1725,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_spiffs_
 rule C_COMPILER____idf_touch_element_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1744,7 +1744,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_touch_element_
 rule C_COMPILER____idf_usb_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1763,7 +1763,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_usb_
 rule C_COMPILER____idf_wifi_provisioning_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1782,7 +1782,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_wifi_provisioning_
 rule C_COMPILER____idf_protocol_examples_common_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1801,7 +1801,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_protocol_examples_common_
 rule ASM_COMPILER____idf_main_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building ASM object $out
 
 
@@ -1811,7 +1811,7 @@ rule ASM_COMPILER____idf_main_unscanned_
 rule C_COMPILER____idf_main_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1830,7 +1830,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_main_
 rule C_COMPILER____idf_i2cdev_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1849,7 +1849,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_i2cdev_
 rule C_COMPILER____idf_ads111x_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1868,7 +1868,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_ads111x_
 rule C_COMPILER____idf_ads130e08_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1887,7 +1887,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_ads130e08_
 rule C_COMPILER____idf_aht_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1906,7 +1906,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_aht_
 rule C_COMPILER____idf_am2320_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1925,7 +1925,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_am2320_
 rule C_COMPILER____idf_bh1750_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1944,7 +1944,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_bh1750_
 rule C_COMPILER____idf_bh1900nux_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1963,7 +1963,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_bh1900nux_
 rule C_COMPILER____idf_bme680_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1982,7 +1982,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_bme680_
 rule C_COMPILER____idf_bmp180_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2001,7 +2001,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_bmp180_
 rule C_COMPILER____idf_bmp280_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2020,7 +2020,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_bmp280_
 rule C_COMPILER____idf_button_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2039,7 +2039,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_button_
 rule C_COMPILER____idf_calibration_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2058,7 +2058,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_calibration_
 rule C_COMPILER____idf_ccs811_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2077,7 +2077,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_ccs811_
 rule C_COMPILER____idf_lib8tion_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2096,7 +2096,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_lib8tion_
 rule C_COMPILER____idf_color_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2115,7 +2115,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_color_
 rule C_COMPILER____idf_dht_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2134,7 +2134,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_dht_
 rule C_COMPILER____idf_dps310_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2153,7 +2153,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_dps310_
 rule C_COMPILER____idf_ds1302_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2172,7 +2172,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_ds1302_
 rule C_COMPILER____idf_ds1307_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2191,7 +2191,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_ds1307_
 rule C_COMPILER____idf_onewire_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2210,7 +2210,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_onewire_
 rule C_COMPILER____idf_ds18x20_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2229,7 +2229,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_ds18x20_
 rule C_COMPILER____idf_ds3231_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2248,7 +2248,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_ds3231_
 rule C_COMPILER____idf_ds3502_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2267,7 +2267,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_ds3502_
 rule C_COMPILER____idf_encoder_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2286,7 +2286,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_encoder_
 rule C_COMPILER____idf_example_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2305,7 +2305,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_example_
 rule C_COMPILER____idf_framebuffer_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2324,7 +2324,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_framebuffer_
 rule C_COMPILER____idf_hd44780_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2343,7 +2343,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_hd44780_
 rule C_COMPILER____idf_hdc1000_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2362,7 +2362,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_hdc1000_
 rule C_COMPILER____idf_hmc5883l_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2381,7 +2381,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_hmc5883l_
 rule C_COMPILER____idf_ht16k33_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2400,7 +2400,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_ht16k33_
 rule C_COMPILER____idf_hts221_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2419,7 +2419,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_hts221_
 rule C_COMPILER____idf_hx711_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2438,7 +2438,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_hx711_
 rule C_COMPILER____idf_icm42670_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2457,7 +2457,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_icm42670_
 rule C_COMPILER____idf_impulse_sensor_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2476,7 +2476,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_impulse_sensor_
 rule C_COMPILER____idf_ina219_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2495,7 +2495,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_ina219_
 rule C_COMPILER____idf_ina260_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2514,7 +2514,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_ina260_
 rule C_COMPILER____idf_ina3221_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2533,7 +2533,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_ina3221_
 rule C_COMPILER____idf_l3gx_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2552,7 +2552,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_l3gx_
 rule C_COMPILER____idf_lc709203f_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2571,7 +2571,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_lc709203f_
 rule C_COMPILER____idf_led_strip_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2590,7 +2590,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_led_strip_
 rule C_COMPILER____idf_led_strip_spi_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2609,7 +2609,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_led_strip_spi_
 rule C_COMPILER____idf_lm75_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2628,7 +2628,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_lm75_
 rule C_COMPILER____idf_ls7366r_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2647,7 +2647,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_ls7366r_
 rule C_COMPILER____idf_lsm303_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2666,7 +2666,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_lsm303_
 rule C_COMPILER____idf_max1704x_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2685,7 +2685,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_max1704x_
 rule C_COMPILER____idf_max31725_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2704,7 +2704,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_max31725_
 rule C_COMPILER____idf_max31855_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2723,7 +2723,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_max31855_
 rule C_COMPILER____idf_max31865_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2742,7 +2742,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_max31865_
 rule C_COMPILER____idf_max7219_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2761,7 +2761,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_max7219_
 rule C_COMPILER____idf_mcp23008_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2780,7 +2780,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_mcp23008_
 rule C_COMPILER____idf_mcp23x17_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2799,7 +2799,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_mcp23x17_
 rule C_COMPILER____idf_mcp342x_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2818,7 +2818,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_mcp342x_
 rule C_COMPILER____idf_mcp4725_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2837,7 +2837,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_mcp4725_
 rule C_COMPILER____idf_mcp960x_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2856,7 +2856,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_mcp960x_
 rule C_COMPILER____idf_mcp9808_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2875,7 +2875,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_mcp9808_
 rule C_COMPILER____idf_mhz19b_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2894,7 +2894,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_mhz19b_
 rule C_COMPILER____idf_mp2660_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2913,7 +2913,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_mp2660_
 rule C_COMPILER____idf_mpu6050_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2932,7 +2932,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_mpu6050_
 rule C_COMPILER____idf_ms5611_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2951,7 +2951,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_ms5611_
 rule C_COMPILER____idf_noise_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2970,7 +2970,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_noise_
 rule C_COMPILER____idf_pca9557_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -2989,7 +2989,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_pca9557_
 rule C_COMPILER____idf_pca9632_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3008,7 +3008,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_pca9632_
 rule C_COMPILER____idf_pca9685_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3027,7 +3027,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_pca9685_
 rule C_COMPILER____idf_pcf8563_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3046,7 +3046,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_pcf8563_
 rule C_COMPILER____idf_pcf8574_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3065,7 +3065,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_pcf8574_
 rule C_COMPILER____idf_pcf8575_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3084,7 +3084,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_pcf8575_
 rule C_COMPILER____idf_pcf8591_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3103,7 +3103,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_pcf8591_
 rule C_COMPILER____idf_qmc5883l_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3122,7 +3122,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_qmc5883l_
 rule C_COMPILER____idf_qmp6988_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3141,7 +3141,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_qmp6988_
 rule C_COMPILER____idf_rda5807m_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3160,7 +3160,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_rda5807m_
 rule C_COMPILER____idf_scd30_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3179,7 +3179,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_scd30_
 rule C_COMPILER____idf_scd4x_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3198,7 +3198,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_scd4x_
 rule C_COMPILER____idf_sfa3x_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3217,7 +3217,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_sfa3x_
 rule C_COMPILER____idf_sgm58031_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3236,7 +3236,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_sgm58031_
 rule C_COMPILER____idf_sgp40_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3255,7 +3255,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_sgp40_
 rule C_COMPILER____idf_sht3x_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3274,7 +3274,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_sht3x_
 rule C_COMPILER____idf_sht4x_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3293,7 +3293,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_sht4x_
 rule C_COMPILER____idf_si7021_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3312,7 +3312,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_si7021_
 rule C_COMPILER____idf_sts21_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3331,7 +3331,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_sts21_
 rule C_COMPILER____idf_sts3x_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3350,7 +3350,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_sts3x_
 rule C_COMPILER____idf_tca6424a_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3369,7 +3369,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_tca6424a_
 rule C_COMPILER____idf_tca9548_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3388,7 +3388,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_tca9548_
 rule C_COMPILER____idf_tca95x5_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3407,7 +3407,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_tca95x5_
 rule C_COMPILER____idf_tda74xx_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3426,7 +3426,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_tda74xx_
 rule C_COMPILER____idf_tps63101x_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3445,7 +3445,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_tps63101x_
 rule C_COMPILER____idf_tsl2561_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3464,7 +3464,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_tsl2561_
 rule C_COMPILER____idf_tsl2591_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3483,7 +3483,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_tsl2591_
 rule C_COMPILER____idf_tsl4531_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3502,7 +3502,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_tsl4531_
 rule C_COMPILER____idf_tsys01_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3521,7 +3521,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_tsys01_
 rule C_COMPILER____idf_ultrasonic_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3540,7 +3540,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_ultrasonic_
 rule C_COMPILER____idf_veml7700_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -3559,7 +3559,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_veml7700_
 rule C_COMPILER____idf_wiegand_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ccache ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\Viktoriya\tarnoff\Espressif\tools\xtensa-esp-elf\esp-13.2.0_20240530\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 

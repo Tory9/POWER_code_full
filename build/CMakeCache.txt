@@ -14,12 +14,6 @@
 # EXTERNAL cache entries
 ########################
 
-//No help, variable specified on the command line.
-CCACHE_ENABLE:UNINITIALIZED=1
-
-//Path to a program.
-CCACHE_FOUND:FILEPATH=C:/Viktoriya/tarnoff/Espressif/tools/ccache/4.10.2/ccache-4.10.2-windows-x86_64/ccache.exe
-
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=C:/Viktoriya/tarnoff/Espressif/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/bin/xtensa-esp32s3-elf-addr2line.exe
 
@@ -360,9 +354,6 @@ POWER_code_full_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 POWER_code_full_SOURCE_DIR:STATIC=C:/Users/Viktoriya/POWER_code_full
-
-//No help, variable specified on the command line.
-PYTHON:UNINITIALIZED=C:\Viktoriya\tarnoff\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe
 
 //No help, variable specified on the command line.
 PYTHON_DEPS_CHECKED:UNINITIALIZED=1
