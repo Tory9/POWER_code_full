@@ -6313,12 +6313,152 @@
             {
                 "children": [],
                 "depends_on": null,
-                "help": "config EXAMPLE_STORE_HISTORY\n    bool \"Store command history in flash\"\n    default y\n    help\n        Linenoise line editing library provides functions to save and load\n        command history. If this option is enabled, initalizes a FAT filesystem\n        and uses it to store command history.\n\nconfig CONFIG_EXAMPLE_I2C_MASTER_SCL\n    int \"SCL GPIO Num\"\n    default 19 if IDF_TARGET_ESP32\n    default 4\n    help\n        GPIO number for I2C Master clock line.\n\nconfig CONFIG_EXAMPLE_I2C_MASTER_SDA\n    int \"SDA GPIO Num\"\n    default 18 if IDF_TARGET_ESP32\n    default 5\n    help\n        GPIO number for I2C Master data line.",
+                "help": "config EXAMPLE_STORE_HISTORY\n    bool \"Store command history in flash\"\n    default y\n    help\n        Linenoise line editing library provides functions to save and load\n        command history. If this option is enabled, initalizes a FAT filesystem\n        and uses it to store command history.\n\nconfig CONFIG_EXAMPLE_I2C_MASTER_SCL\n    int \"SCL GPIO Num\"\n    default 19 if IDF_TARGET_ESP32\n    default 4\n    help\n        GPIO number for I2C Master clock line.\n\nconfig CONFIG_EXAMPLE_I2C_MASTER_SDA\n    int \"SDA GPIO Num\"\n    default 18 if IDF_TARGET_ESP32\n    default 5\n    help\n        GPIO number for I2C Master data line.\n\n\nconfig MY_SPI_HOST\nint \"SPI Host\"\ndefault 1\nhelp\n  Set SPI Host. Use 1 for SPI2_HOST or 2 for SPI3_HOST.",
                 "id": "EXAMPLE_HTTP_ENDPOINT",
                 "name": "EXAMPLE_HTTP_ENDPOINT",
                 "range": null,
                 "title": "Example HTTP Endpoint",
                 "type": "string"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "GPIO number for MISO.",
+                "id": "MY_MISO_GPIO",
+                "name": "MY_MISO_GPIO",
+                "range": [
+                    0,
+                    39
+                ],
+                "title": "MISO GPIO",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "GPIO number for MOSI.",
+                "id": "MY_MOSI_GPIO",
+                "name": "MY_MOSI_GPIO",
+                "range": [
+                    0,
+                    39
+                ],
+                "title": "MOSI GPIO",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "GPIO number for SCLK.",
+                "id": "MY_SCLK_GPIO",
+                "name": "MY_SCLK_GPIO",
+                "range": [
+                    0,
+                    39
+                ],
+                "title": "SCLK GPIO",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "GPIO number for CE.",
+                "id": "MY_CE_GPIO",
+                "name": "MY_CE_GPIO",
+                "range": [
+                    0,
+                    39
+                ],
+                "title": "CE GPIO",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "GPIO number for CSN.",
+                "id": "MY_CSN_GPIO",
+                "name": "MY_CSN_GPIO",
+                "range": [
+                    0,
+                    39
+                ],
+                "title": "CSN GPIO",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "Set SPI Host. Use 1 for SPI2_HOST or 2 for SPI3_HOST.",
+                "id": "MY_SPI_HOST",
+                "name": "MY_SPI_HOST",
+                "range": null,
+                "title": "SPI Host",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "GPIO number for MISO.",
+                "id": "MY_MISO_GPIO",
+                "name": "MY_MISO_GPIO",
+                "range": [
+                    0,
+                    39
+                ],
+                "title": "MISO GPIO",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "GPIO number for MOSI.",
+                "id": "MY_MOSI_GPIO",
+                "name": "MY_MOSI_GPIO",
+                "range": [
+                    0,
+                    39
+                ],
+                "title": "MOSI GPIO",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "GPIO number for SCLK.",
+                "id": "MY_SCLK_GPIO",
+                "name": "MY_SCLK_GPIO",
+                "range": [
+                    0,
+                    39
+                ],
+                "title": "SCLK GPIO",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "GPIO number for CE.",
+                "id": "MY_CE_GPIO",
+                "name": "MY_CE_GPIO",
+                "range": [
+                    0,
+                    39
+                ],
+                "title": "CE GPIO",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "GPIO number for CSN.",
+                "id": "MY_CSN_GPIO",
+                "name": "MY_CSN_GPIO",
+                "range": [
+                    0,
+                    39
+                ],
+                "title": "CSN GPIO",
+                "type": "int"
             }
         ],
         "depends_on": null,

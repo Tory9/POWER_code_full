@@ -540,6 +540,12 @@ CONFIG_PARTITION_TABLE_MD5=y
 # Example Configuration
 #
 CONFIG_EXAMPLE_HTTP_ENDPOINT="https://ee3-energy1-default-rtdb.europe-west1.firebasedatabase.app/data.json?auth=jQpI4wE58kv5GlcDeiswL7vaH32CD0OW48iJemVH"
+CONFIG_MY_MISO_GPIO=13
+CONFIG_MY_MOSI_GPIO=11
+CONFIG_MY_SCLK_GPIO=12
+CONFIG_MY_CE_GPIO=9
+CONFIG_MY_CSN_GPIO=10
+CONFIG_MY_SPI_HOST=1
 # end of Example Configuration
 
 #

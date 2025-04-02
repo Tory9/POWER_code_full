@@ -4,6 +4,7 @@
 #include <driver/gpio.h>
 #include <driver/ledc.h>
 #include "interrupts.h"
+#include "mirf.h"
 
 
 const static char *TAG = "INA219_example";
@@ -115,5 +116,12 @@ void app_main(void)
 
     ESP_ERROR_CHECK(i2cdev_init()); 
 
-    xTaskCreate(task, "test", configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL);
+    // xTaskCreate(task, "test", configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL);
+
+        printf("a");
+    #if CONFIG_RECEIVER
+        printf("B");
+        xTaskCreate(&receiver, "RECEIVER", 1024*3, NULL, 2, NULL);
+    #endif
+
 }

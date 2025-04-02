@@ -26,4 +26,89 @@ menu "Example Configuration"
         default 5
         help
             GPIO number for I2C Master data line.
+
+
+    config MY_SPI_HOST
+    int "SPI Host"
+    default 1
+    help
+      Set SPI Host. Use 1 for SPI2_HOST or 2 for SPI3_HOST.
+
+config MY_MISO_GPIO
+    int "MISO GPIO"
+    default 13
+    range 0 39
+    help
+      GPIO number for MISO.
+
+config MY_MOSI_GPIO
+    int "MOSI GPIO"
+    default 11
+    range 0 39
+    help
+      GPIO number for MOSI.
+
+config MY_SCLK_GPIO
+    int "SCLK GPIO"
+    default 12
+    range 0 39
+    help
+      GPIO number for SCLK.
+
+config MY_CE_GPIO
+    int "CE GPIO"
+    default 9
+    range 0 39
+    help
+      GPIO number for CE.
+
+config MY_CSN_GPIO
+    int "CSN GPIO"
+    default 10
+    range 0 39
+    help
+      GPIO number for CSN.
+
+config MY_SPI_HOST
+    int "SPI Host"
+    default 1
+    help
+      Set SPI Host. Use 1 for SPI2_HOST or 2 for SPI3_HOST.
+
+config MY_MISO_GPIO
+    int "MISO GPIO"
+    default 13
+    range 0 39
+    help
+      GPIO number for MISO.
+
+config MY_MOSI_GPIO
+    int "MOSI GPIO"
+    default 11
+    range 0 39
+    help
+      GPIO number for MOSI.
+
+config MY_SCLK_GPIO
+    int "SCLK GPIO"
+    default 12
+    range 0 39
+    help
+      GPIO number for SCLK.
+
+config MY_CE_GPIO
+    int "CE GPIO"
+    default 9
+    range 0 39
+    help
+      GPIO number for CE.
+
+config MY_CSN_GPIO
+    int "CSN GPIO"
+    default 10
+    range 0 39
+    help
+      GPIO number for CSN.
+
+    
 endmenu
