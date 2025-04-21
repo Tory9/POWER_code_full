@@ -8,6 +8,7 @@
 #include "esp_log.h"
 
 #include "mirf.h"
+#include "https_client.h"
 
 const static char *TAG = "NRF24";
 
@@ -22,7 +23,7 @@ const static char *TAG = "NRF24";
 
 #define CONFIG_MISO_GPIO GPIO_NUM_13
 #define CONFIG_MOSI_GPIO GPIO_NUM_11
-#define CONFIG_SCLK_GPIO GPIO_NUM_12
+#define CONFIG_SCLK_GPIO GPIO_NUM_12 //THERE WILL BE CONFLIC WITH OUR CODE BC ON PIN 12 PWM IS GEN
 #define CONFIG_CE_GPIO GPIO_NUM_9
 #define CONFIG_CSN_GPIO GPIO_NUM_10
 
@@ -262,7 +263,7 @@ extern void Nrf24_getData(NRF24_t * dev, uint8_t * data)
 	// repeat from step 1)."
 	// So if we're going to clear RX_DR here, we need to check the RX FIFO
 	// in the dataReady() function
-	Nrf24_configRegister(dev, STATUS, (1 << RX_DR)); // Reset status register
+	Nrf24_configRegister(dev,  NRF24_STATUS_REG, (1 << RX_DR)); // Reset status register
 }
 
 // Clocks only one byte into the given MiRF register
@@ -376,7 +377,7 @@ bool Nrf24_isSend(NRF24_t * dev, int timeout) {
 
 uint8_t Nrf24_getStatus(NRF24_t * dev) {
 	uint8_t rv;
-	Nrf24_readRegister(dev, STATUS, &rv, 1);
+	Nrf24_readRegister(dev,  NRF24_STATUS_REG, &rv, 1);
 	return rv;
 }
 
@@ -385,7 +386,7 @@ void Nrf24_powerUpRx(NRF24_t * dev) {
 	Nrf24_ceLow(dev);
 	Nrf24_configRegister(dev, CONFIG, mirf_CONFIG | ( (1 << PWR_UP) | (1 << PRIM_RX) ) ); //set device as RX mode
 	Nrf24_ceHi(dev);
-	Nrf24_configRegister(dev, STATUS, (1 << TX_DS) | (1 << MAX_RT)); //Clear seeded interrupt and max tx number interrupt
+	Nrf24_configRegister(dev,  NRF24_STATUS_REG, (1 << TX_DS) | (1 << MAX_RT)); //Clear seeded interrupt and max tx number interrupt
 }
 
 void Nrf24_flushRx(NRF24_t * dev)
@@ -398,7 +399,7 @@ void Nrf24_flushRx(NRF24_t * dev)
 void Nrf24_powerUpTx(NRF24_t * dev) {
 	dev->PTX = 1;
 	Nrf24_configRegister(dev, CONFIG, mirf_CONFIG | ( (1 << PWR_UP) | (0 << PRIM_RX) ) ); //set device as TX mode
-	Nrf24_configRegister(dev, STATUS, (1 << TX_DS) | (1 << MAX_RT)); //Clear seeded interrupt and max tx number interrupt
+	Nrf24_configRegister(dev,  NRF24_STATUS_REG, (1 << TX_DS) | (1 << MAX_RT)); //Clear seeded interrupt and max tx number interrupt
 }
 
 void Nrf24_ceHi(NRF24_t * dev) {
@@ -659,7 +660,7 @@ void receiver(void *pvParameters)
 	esp_err_t ret = Nrf24_setRADDR(&dev, (uint8_t *)"FGHIJ");
 	if (ret != ESP_OK) {
 		ESP_LOGE(pcTaskGetName(NULL), "nrf24l01 not installed");
-		while(1) { vTaskDelay(1); }
+		while(1) { vTaskDelay(1); } // Avoid WatchDog alerts
 	}
 
 #if CONFIG_ADVANCED
@@ -684,6 +685,9 @@ void receiver(void *pvParameters)
 			Nrf24_getData(&dev, buf);
 			ESP_LOGI(pcTaskGetName(NULL), "Got data:%s", buf);
 			//ESP_LOG_BUFFER_HEXDUMP(pcTaskGetName(NULL), buf, payload, ESP_LOG_INFO);
+
+			//send to db data recieved
+			send_pic_data(buf);
 		}
 		vTaskDelay(1); // Avoid WatchDog alerts
 	}

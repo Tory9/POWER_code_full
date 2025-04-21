@@ -26,7 +26,9 @@ typedef struct {
 #define SETUP_RETR  0x04
 #define RF_CH       0x05
 #define RF_SETUP    0x06
-#define STATUS      0x07
+
+#define  NRF24_STATUS_REG 0x07
+
 #define OBSERVE_TX  0x08
 #define CD          0x09
 #define RX_ADDR_P0  0x0A
@@ -227,6 +229,7 @@ uint8_t   Nrf24_getPayload(NRF24_t * dev);
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_log.h"
+
 
 #define CONFIG_RECEIVER 1
 #define CONFIG_RADIO_CHANNEL 115

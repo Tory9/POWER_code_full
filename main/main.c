@@ -89,6 +89,7 @@ void task(void *pvParameters) {
                 
 
                 xTaskCreate(&http_test_task, "http_test_task", 8192, (void *)params_in, 5, NULL);
+
             }
         }
         vTaskDelay(pdMS_TO_TICKS(10));   // Prevent task from hogging the CPU and triggering watchdog
@@ -116,7 +117,7 @@ void app_main(void)
 
     ESP_ERROR_CHECK(i2cdev_init()); 
 
-    // xTaskCreate(task, "test", configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL);
+    xTaskCreate(task, "test", configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL);
 
         printf("a");
     #if CONFIG_RECEIVER

@@ -18,6 +18,7 @@
 #include "esp_http_client.h"
 #include "esp_mac.h"
 
+
 #if CONFIG_MBEDTLS_CERTIFICATE_BUNDLE
 #include "esp_crt_bundle.h"
 #endif
@@ -42,5 +43,5 @@ void initialize_sntp();
 void wait_for_time_sync();
 void send_sensor_data(int ina_out, float power, float voltage);
 void http_test_task(void *pvParameters);
-
+void send_pic_data(uint8_t buf[32]);
 
