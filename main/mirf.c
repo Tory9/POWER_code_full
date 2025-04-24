@@ -23,7 +23,7 @@ const static char *TAG = "NRF24";
 
 #define CONFIG_MISO_GPIO GPIO_NUM_13
 #define CONFIG_MOSI_GPIO GPIO_NUM_11
-#define CONFIG_SCLK_GPIO GPIO_NUM_12 //THERE WILL BE CONFLIC WITH OUR CODE BC ON PIN 12 PWM IS GEN
+#define CONFIG_SCLK_GPIO GPIO_NUM_8 //THERE WILL BE CONFLIC WITH OUR CODE BC ON PIN 12 PWM IS GEN
 #define CONFIG_CE_GPIO GPIO_NUM_9
 #define CONFIG_CSN_GPIO GPIO_NUM_10
 
@@ -668,7 +668,7 @@ void receiver(void *pvParameters)
 #endif // CONFIG_ADVANCED
 
 	// Print settings
-	Nrf24_printDetails(&dev);
+	// Nrf24_printDetails(&dev);
 	ESP_LOGI(pcTaskGetName(NULL), "Started");
 
 	uint8_t buf[32];
@@ -681,6 +681,7 @@ void receiver(void *pvParameters)
 
 	while(1) {
 		// Wait for received data
+		//ESP_LOGI(pcTaskGetName(NULL), "waiting for data to be recieved");
 		if (Nrf24_dataReady(&dev)) {
 			Nrf24_getData(&dev, buf);
 			ESP_LOGI(pcTaskGetName(NULL), "Got data:%s", buf);
@@ -689,7 +690,7 @@ void receiver(void *pvParameters)
 			//send to db data recieved
 			send_pic_data(buf);
 		}
-		vTaskDelay(1); // Avoid WatchDog alerts
+		vTaskDelay(100); // Avoid WatchDog alerts
 	}
 }
 #endif // CONFIG_RECEIVER

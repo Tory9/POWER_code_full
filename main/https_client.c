@@ -107,11 +107,12 @@ static void https_with_url(void)
 }
 
 
-void send_sensor_data(int ina_out, float power, float voltage){
+void send_sensor_data(int ina_out, float power, float voltage, float current){
 
     cJSON *root = cJSON_CreateObject();
     cJSON_AddNumberToObject(root, "power", power);
     cJSON_AddNumberToObject(root, "voltage", voltage);
+    cJSON_AddNumberToObject(root, "current", current);
 
     char *post_data = cJSON_PrintUnformatted(root);
     cJSON_Delete(root); 
@@ -179,9 +180,15 @@ void send_pic_data(uint8_t buf[32]){
              "https://windturbinemonitor-b1b52-default-rtdb.europe-west1.firebasedatabase.app/Data/lamp/%s.json?auth=t3kgf6oyJS006l10Hrn81t2HG7ELUcsOSLGFpBun", 
              time_str);
 
-    char json_buf[64];
-    snprintf(json_buf, sizeof(json_buf), "\"%s\"", (char *)buf); // wrap in quotes for valid JSON string
+    uint8_t lamp_state = buf[0] - '0';  // '1'→1, '0'→0, etc
 
+    char json_buf[16];
+    int len = snprintf(json_buf, sizeof(json_buf), "\"%u\"", lamp_state);
+    if (len < 0 || len >= sizeof(json_buf)) {
+         ESP_LOGE(TAG, "json_buf overflow");
+            return;
+        }
+    
 
     http_buffer_ctx_t *ctx = malloc(sizeof(http_buffer_ctx_t));
     if (!ctx) {
@@ -240,7 +247,7 @@ void http_test_task(void *pvParameters)
 #if CONFIG_MBEDTLS_CERTIFICATE_BUNDLE
     ESP_LOGI(TAG, "Start https");
     sensor_data_params_t *params = (sensor_data_params_t *)pvParameters;
-    send_sensor_data(params->ina_out, params->power, params->voltage);
+    send_sensor_data(params->ina_out, params->power, params->voltage, params->current);
     free(pvParameters);
 #endif
 
