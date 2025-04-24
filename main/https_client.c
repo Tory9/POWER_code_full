@@ -107,11 +107,12 @@ static void https_with_url(void)
 }
 
 
-void send_sensor_data(int ina_out, float power, float voltage){
+void send_sensor_data(int ina_out, float power, float voltage, float current){
 
     cJSON *root = cJSON_CreateObject();
     cJSON_AddNumberToObject(root, "power", power);
     cJSON_AddNumberToObject(root, "voltage", voltage);
+    cJSON_AddNumberToObject(root, "current", current);
 
     char *post_data = cJSON_PrintUnformatted(root);
     cJSON_Delete(root); 
@@ -171,6 +172,71 @@ void send_sensor_data(int ina_out, float power, float voltage){
     free(ctx->buffer);
     free(ctx);
 }
+void send_pic_data(uint8_t buf[32]){
+
+    char url[256];
+    char* time_str = print_time();
+    snprintf(url, sizeof(url), 
+             "https://windturbinemonitor-b1b52-default-rtdb.europe-west1.firebasedatabase.app/Data/lamp/%s.json?auth=t3kgf6oyJS006l10Hrn81t2HG7ELUcsOSLGFpBun", 
+             time_str);
+
+    uint8_t lamp_state = buf[0] - '0';  // '1'→1, '0'→0, etc
+
+    char json_buf[16];
+    int len = snprintf(json_buf, sizeof(json_buf), "\"%u\"", lamp_state);
+    if (len < 0 || len >= sizeof(json_buf)) {
+         ESP_LOGE(TAG, "json_buf overflow");
+            return;
+        }
+    
+
+    http_buffer_ctx_t *ctx = malloc(sizeof(http_buffer_ctx_t));
+    if (!ctx) {
+        ESP_LOGE(TAG, "Failed to allocate memory for ctx");
+        return;
+    }
+
+    ctx->buffer = malloc(MAX_HTTP_OUTPUT_BUFFER);
+    ctx->length = 0;
+    ctx->max_length = MAX_HTTP_OUTPUT_BUFFER - 1;
+
+    if (!ctx->buffer) {
+        ESP_LOGE(TAG, "Failed to allocate memory for response buffer");
+        free(ctx);
+        return;
+    }
+
+
+    esp_http_client_config_t config = {
+        .url = url,
+        .event_handler = _http_event_handler,
+        .crt_bundle_attach = esp_crt_bundle_attach,
+        .user_data = ctx
+    };
+
+    esp_http_client_handle_t client = esp_http_client_init(&config);
+
+
+    esp_http_client_set_method(client, HTTP_METHOD_PUT);
+    esp_http_client_set_header(client, "Content-Type", "application/json");
+    esp_http_client_set_post_field(client, json_buf, strlen(json_buf));
+
+    esp_err_t err = esp_http_client_perform(client);
+
+    if (err == ESP_OK) {
+        ESP_LOGI(TAG, "HTTPS Status = %d, content_length = %" PRId64,
+                 esp_http_client_get_status_code(client),
+                 esp_http_client_get_content_length(client));
+    } else {
+        ESP_LOGE(TAG, "Error performing HTTP request: %s", esp_err_to_name(err));
+    }
+
+
+    esp_http_client_cleanup(client);
+    free(ctx->buffer);
+    free(ctx);
+
+}
 #endif 
 
 
@@ -181,7 +247,7 @@ void http_test_task(void *pvParameters)
 #if CONFIG_MBEDTLS_CERTIFICATE_BUNDLE
     ESP_LOGI(TAG, "Start https");
     sensor_data_params_t *params = (sensor_data_params_t *)pvParameters;
-    send_sensor_data(params->ina_out, params->power, params->voltage);
+    send_sensor_data(params->ina_out, params->power, params->voltage, params->current);
     free(pvParameters);
 #endif
 

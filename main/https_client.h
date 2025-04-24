@@ -29,6 +29,7 @@ typedef struct {
     int ina_out;
     float power;
     float voltage;
+    float current;
 } sensor_data_params_t;
 
 typedef struct {
@@ -40,7 +41,7 @@ typedef struct {
 char* print_time();
 void initialize_sntp();
 void wait_for_time_sync();
-void send_sensor_data(int ina_out, float power, float voltage);
+void send_sensor_data(int ina_out, float power, float voltage, float current);
 void http_test_task(void *pvParameters);
-
+void send_pic_data(uint8_t buf[32]);
 
