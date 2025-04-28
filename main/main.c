@@ -181,7 +181,7 @@ void app_main(void)
 
     ESP_ERROR_CHECK(i2cdev_init()); 
 
-    xTaskCreate(task, "test", configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL);
+        xTaskCreate(task, "test", configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL);
     // xTaskCreate(duty_sweep_task,
     //     "duty_sweep",
     //     4096,            // stack
@@ -190,8 +190,8 @@ void app_main(void)
     //     NULL);
 
     #if CONFIG_RECEIVER
-        // ESP_LOGI(TAG, "Starting nRF24L01 receiver only");
-        // xTaskCreate(&receiver, "RECEIVER", 1024*10, NULL, 2, NULL);
+        ESP_LOGI(TAG, "Starting nRF24L01 receiver only");
+        xTaskCreate(&receiver, "RECEIVER", 1024*10, NULL, 2, NULL);
     #else
         ESP_LOGW(TAG, "CONFIG_RECEIVER is not set — nothing to do!");
     #endif
