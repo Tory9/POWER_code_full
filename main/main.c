@@ -34,6 +34,9 @@ void pwm(){
 
 
 
+
+
+
 void task(void *pvParameters) {
     ina219_t dev_out = ina_start(I2C_ADDR_OUT);
     ina219_t dev_in = ina_start(I2C_ADDR_IN);
@@ -49,8 +52,8 @@ void task(void *pvParameters) {
             power_data data_out = get_power_data(&dev_out);
             power_data data_in = get_power_data(&dev_in);
 
-            int DUTY_CYCLE = mppt(data_out.power, data_out.bus_voltage);
-
+            // int DUTY_CYCLE = mppt(data_out.power, data_out.bus_voltage);
+            int DUTY_CYCLE = mppt(data_in.power, data_in.bus_voltage);
             if (print_flag) {
                 print_flag = false;
 
@@ -99,6 +102,65 @@ void task(void *pvParameters) {
     }
 }
 
+    
+    static void duty_sweep_task(void *pv)
+    {
+        ina219_t dev_out = ina_start(I2C_ADDR_OUT);
+        ina219_t dev_in  = ina_start(I2C_ADDR_IN);
+    
+        pwm();
+        init_interrupts();
+    
+        const int DUTY_MIN   = 30;
+        const int DUTY_MAX   = 230;
+        const int N_SAMPLES  = 1;
+        const int SETTLE_MS  = 40;
+        const int BETWEEN_MS = 20;
+    
+        ESP_LOGI(TAG,
+                 "===== STARTING DUTY SWEEP  (%d → %d, %d samples/step) =====",
+                 DUTY_MIN, DUTY_MAX, N_SAMPLES);
+    
+        for (int d = DUTY_MIN; d <= DUTY_MAX; ++d) {
+    
+            /* --- apply duty ------------------------------------------------ */
+            ledc_set_duty_and_update(LEDC_LOW_SPEED_MODE,
+                                     LEDC_CHANNEL_0,
+                                     d, 0);
+    
+            vTaskDelay(pdMS_TO_TICKS(SETTLE_MS));
+    
+    
+            /* --- take N_SAMPLES readings ----------------------------------- */
+            for (int k = 0; k < N_SAMPLES; ++k) {
+                power_data in  = get_power_data(&dev_in);
+                power_data out = get_power_data(&dev_out);
+    
+                // printf("[D=%3d]  "
+                //     "Vin=%6.3f V  Iin=%6.1f mA  Pin=%7.1f mW  |  "
+                //     "Vout=%6.3f V Iout=%6.1f mA Pout=%7.1f mW\n",
+                //     d,
+                //     in.bus_voltage,   in.current,   in.power,
+                //     out.bus_voltage,  out.current,  out.power);
+        
+                printf("%3d,"
+                        "%6.3f, %6.1f, %7.1f, "
+                        "%6.3f, %6.1f, %7.1f \n",
+                        d,
+                        in.bus_voltage,   in.current,   in.power,
+                        out.bus_voltage,  out.current,  out.power);
+    
+                vTaskDelay(pdMS_TO_TICKS(BETWEEN_MS));
+            }
+    
+                         // exits this task gracefully
+    }
+    ESP_LOGI(TAG, "===== SWEEP COMPLETE — deleting task =====");
+        vTaskDelete(NULL);   
+}
+    
+    
+
 void app_main(void)
 {
     esp_err_t ret = nvs_flash_init();
@@ -119,11 +181,17 @@ void app_main(void)
 
     ESP_ERROR_CHECK(i2cdev_init()); 
 
-    xTaskCreate(task, "test", configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL);
+    // xTaskCreate(task, "test", configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL);
+    xTaskCreate(duty_sweep_task,
+        "duty_sweep",
+        4096,            // stack
+        NULL,
+        5,               // prio
+        NULL);
 
     #if CONFIG_RECEIVER
-        ESP_LOGI(TAG, "Starting nRF24L01 receiver only");
-        xTaskCreate(&receiver, "RECEIVER", 1024*10, NULL, 2, NULL);
+        // ESP_LOGI(TAG, "Starting nRF24L01 receiver only");
+        // xTaskCreate(&receiver, "RECEIVER", 1024*10, NULL, 2, NULL);
     #else
         ESP_LOGW(TAG, "CONFIG_RECEIVER is not set — nothing to do!");
     #endif

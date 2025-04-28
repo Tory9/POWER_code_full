@@ -1,6 +1,7 @@
 #include "mppt.h"
+#include "ina219_my.h"
 
-int DUTY_CYCLE = 127;
+int DUTY_CYCLE = 127; 
 double P_prev = 1;
 double V_prev = 1;
 
@@ -10,25 +11,25 @@ int mppt(double P, double V){
     if (P > P_prev) {
         //printf("power UP\n");
         if (V > V_prev) {
-            DUTY_CYCLE+= DUTY_STEP;
+            DUTY_CYCLE-= DUTY_STEP;
             //printf("volatge UP\n");
         } else if(V < V_prev){
-            DUTY_CYCLE-= DUTY_STEP;
+            DUTY_CYCLE+= DUTY_STEP;
             //printf("volatage DOWN\n");
         }
-    } else {
+    } else if (P < P_prev){
         //printf("power DOWN\n");
         if (V > V_prev) {
-            DUTY_CYCLE-= DUTY_STEP;
+            DUTY_CYCLE+= DUTY_STEP;
             //printf("volatge UP\n");
         } else if(V < V_prev){
-            DUTY_CYCLE+= DUTY_STEP;
+            DUTY_CYCLE-= DUTY_STEP;
             //printf("volatge DOWN\n");
         }
     }
 
     // Ensure duty cycle remains in valid range
-    if (V >= 14) DUTY_CYCLE = DUTY_CYCLE - 5;
+    //if (V >= 14) DUTY_CYCLE = DUTY_CYCLE - 5;
     if (DUTY_CYCLE < 30) DUTY_CYCLE = 30;
     if (DUTY_CYCLE > 230) DUTY_CYCLE = 230;
 
@@ -41,3 +42,5 @@ int mppt(double P, double V){
     return DUTY_CYCLE;
 
 }
+
+

@@ -51,5 +51,5 @@ void init_interrupts(void) {
     ESP_ERROR_CHECK(esp_timer_start_periodic(http_timer, 50 * 1000 * 1000));
 
     ESP_ERROR_CHECK(esp_timer_create(&mppt_timer_args, &mppt_timer));
-    ESP_ERROR_CHECK(esp_timer_start_periodic(mppt_timer, 25 * 1000));
+    ESP_ERROR_CHECK(esp_timer_start_periodic(mppt_timer, 50 * 1000));
 }
