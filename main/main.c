@@ -57,11 +57,11 @@ void task(void *pvParameters) {
             if (print_flag) {
                 print_flag = false;
 
-                // printf("OUTPUT___ VBUS: %.04f V, VSHUNT: %.04f mV, IBUS: %.04f mA, PBUS: %.04f mW, DUTY: %d\n",
-                //     data_out.bus_voltage, data_out.shunt_voltage, data_out.current, data_out.power, DUTY_CYCLE);
+                printf("OUTPUT___ VBUS: %.04f V, VSHUNT: %.04f mV, IBUS: %.04f mA, PBUS: %.04f mW, DUTY: %d\n",
+                    data_out.bus_voltage, data_out.shunt_voltage, data_out.current, data_out.power, DUTY_CYCLE);
 
-                // printf("INPUT ___ VBUS: %.04f V, VSHUNT: %.04f mV, IBUS: %.04f mA, PBUS: %.04f mW, DUTY: %d\n",
-                //     data_in.bus_voltage, data_in.shunt_voltage, data_in.current, data_in.power, DUTY_CYCLE);
+                printf("INPUT ___ VBUS: %.04f V, VSHUNT: %.04f mV, IBUS: %.04f mA, PBUS: %.04f mW, DUTY: %d\n",
+                    data_in.bus_voltage, data_in.shunt_voltage, data_in.current, data_in.power, DUTY_CYCLE);
             }
 
 
@@ -181,13 +181,13 @@ void app_main(void)
 
     ESP_ERROR_CHECK(i2cdev_init()); 
 
-    // xTaskCreate(task, "test", configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL);
-    xTaskCreate(duty_sweep_task,
-        "duty_sweep",
-        4096,            // stack
-        NULL,
-        5,               // prio
-        NULL);
+    xTaskCreate(task, "test", configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL);
+    // xTaskCreate(duty_sweep_task,
+    //     "duty_sweep",
+    //     4096,            // stack
+    //     NULL,
+    //     5,               // prio
+    //     NULL);
 
     #if CONFIG_RECEIVER
         // ESP_LOGI(TAG, "Starting nRF24L01 receiver only");

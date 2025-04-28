@@ -162,3 +162,16 @@
 37	249	7675410052201925	C:/Users/Viktoriya/POWER_code_full/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	c652858c962608e6
 36	267	7675411677618335	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	c652858c962608e6
 36	267	7675411677618335	C:/Users/Viktoriya/POWER_code_full/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	c652858c962608e6
+97	608	7675462450242423	esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/esp_bootloader_desc.c.obj	65d037e8df31d2bb
+609	1158	7675462455359805	esp-idf/esp_bootloader_format/libesp_bootloader_format.a	8ae3d7d2a0adc16c
+1158	1728	7675462460844328	bootloader.elf	ef001af31064a10e
+1728	2614	7675462475188415	.bin_timestamp	79597bc7f673e662
+1728	2614	7675462475188415	C:/Users/Viktoriya/POWER_code_full/build/bootloader/.bin_timestamp	79597bc7f673e662
+2614	2913	7675462475401185	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	c652858c962608e6
+2614	2913	7675462475401185	C:/Users/Viktoriya/POWER_code_full/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	c652858c962608e6
+76	415	7675491456940939	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	c652858c962608e6
+76	415	7675491456940939	C:/Users/Viktoriya/POWER_code_full/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	c652858c962608e6
+63	396	7675495785924342	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	c652858c962608e6
+63	396	7675495785924342	C:/Users/Viktoriya/POWER_code_full/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	c652858c962608e6
+56	382	7675500821801685	esp-idf/esptool_py/CMakeFiles/bootloader_check_size	c652858c962608e6
+56	382	7675500821801685	C:/Users/Viktoriya/POWER_code_full/build/bootloader/esp-idf/esptool_py/CMakeFiles/bootloader_check_size	c652858c962608e6
