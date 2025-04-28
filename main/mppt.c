@@ -45,10 +45,10 @@
 #define DUTY_MIN           30
 #define DUTY_MAX          230
 #define DUTY_MID          127
-#define DUTY_STEP           1       // size of each perturbation
+    #define DUTY_STEP           6       // size of each perturbation
 #define POWER_ALPHA       0.30      // EWMA smoothing factor (0-1)
-#define POWER_DEAD_BAND   30      // mW – ignore smaller ΔP
-#define VOLTAGE_HYST      1      // V – re-centre trigger
+#define POWER_DEAD_BAND    30     // mW – ignore smaller ΔP
+#define VOLTAGE_HYST      10      // V – re-centre trigger
 
 static int    duty_cycle   = DUTY_MID;
 static int    direction    = +1;          // +1 = raising duty, –1 = lowering
