@@ -1,3 +1,5 @@
+//this esp lib was taken from the https://github.com/nopnop2002/esp-idf-mirf/blob/master/LICENSE
+
 
 #ifndef MAIN_MIRF_H_
 #define MAIN_MIRF_H_

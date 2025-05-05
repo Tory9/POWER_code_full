@@ -1,3 +1,6 @@
+
+//following code includes library taken from https://github.com/UncleRus/esp-idf-lib
+
 #include "ina219_my.h"
 const static char *TAG = "INA219_example";
 
