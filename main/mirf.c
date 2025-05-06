@@ -659,7 +659,7 @@ void receiver(void *pvParameters)
 	Nrf24_config(&dev, channel, payload);
 
 	// Set my own address using 5 characters
-	esp_err_t ret = Nrf24_setRADDR(&dev, (uint8_t *)"FGHIJ");
+		esp_err_t ret = Nrf24_setRADDR(&dev, (uint8_t *)"FGHII");
 	if (ret != ESP_OK) {
 		ESP_LOGE(pcTaskGetName(NULL), "nrf24l01 not installed");
 		while(1) { vTaskDelay(1); } // Avoid WatchDog alerts
@@ -683,6 +683,7 @@ void receiver(void *pvParameters)
 
 	while(1) {
 		// Wait for received data
+
 		//ESP_LOGI(pcTaskGetName(NULL), "waiting for data to be recieved");
 		if (Nrf24_dataReady(&dev)) {
 			Nrf24_getData(&dev, buf);
@@ -691,8 +692,8 @@ void receiver(void *pvParameters)
 
 			//send to db data recieved
 			send_pic_data(buf);
-		}
-		vTaskDelay(100); // Avoid WatchDog alerts
+			}
+		vTaskDelay(1); // Avoid WatchDog alerts
 	}
 }
 #endif // CONFIG_RECEIVER

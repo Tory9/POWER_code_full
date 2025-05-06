@@ -79,7 +79,7 @@ void task(void *pvParameters) {
                 params_out->current = data_out.current;
 
 
-                xTaskCreate(&http_test_task, "http_test_task", 8192, (void *)params_out, 5, NULL);
+                xTaskCreate(&http_test_task, "http_test_task", 8192, (void *)params_out, 2, NULL);
 
 
                 sensor_data_params_t *params_in = malloc(sizeof(sensor_data_params_t));
@@ -93,7 +93,7 @@ void task(void *pvParameters) {
                 params_in->current = data_in.current;
                 
 
-                xTaskCreate(&http_test_task, "http_test_task", 8192, (void *)params_in, 5, NULL);
+                xTaskCreatePinnedToCore(&http_test_task, "http_test_task", 8192, (void *)params_in, 5, NULL, 1);
 
             }
         }
@@ -181,7 +181,7 @@ void app_main(void)
 
     ESP_ERROR_CHECK(i2cdev_init()); 
 
-        xTaskCreate(task, "test", configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL);
+    xTaskCreatePinnedToCore(task, "test", configMINIMAL_STACK_SIZE * 8, NULL, 5, NULL, 1);
     // xTaskCreate(duty_sweep_task,
     //     "duty_sweep",
     //     4096,            // stack
@@ -191,7 +191,7 @@ void app_main(void)
 
     #if CONFIG_RECEIVER
         ESP_LOGI(TAG, "Starting nRF24L01 receiver only");
-        xTaskCreate(&receiver, "RECEIVER", 1024*10, NULL, 2, NULL);
+        xTaskCreatePinnedToCore(&receiver, "RECEIVER", 1024*15, NULL, 8, NULL, 0);
     #else
         ESP_LOGW(TAG, "CONFIG_RECEIVER is not set — nothing to do!");
     #endif
